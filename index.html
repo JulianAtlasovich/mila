@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mila - Compromiso con la Accion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="#" class="logo-wrap">
+      <img src="imgs/logo.png" alt="Mila">
+    </a>
+    <nav>
+      <a href="#vision">Nosotros</a>
+      <a href="#novedades">Novedades</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#partners">Aliados</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#donaciones" class="cta-nav">Donar</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Fundación Milá</div>
+      <h1>Compromiso<br>con la <em>Acción</em></h1>
+      <p>Construimos liderazgos que defienden los valores democráticos con claridad, convicción y vocación de transformar.</p>
+      <a href="#" class="hero-btn" onclick="openModal(); return false;">
+        <div class="play-icon">
+          <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+        Ver Video Institucional
+      </a>
+    </div>
+
+    
+  </section>
+
+  <div class="modal-overlay" id="videoModal" onclick="closeModal(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal(null)">X</button>
+      <iframe id="videoFrame" src="" allowfullscreen allow="autoplay"></iframe>
+    </div>
+  </div>
+
+  <section id="vision" style="padding:0; border-bottom: 3px solid var(--gold);">
+    <div class="vision-mission">
+      <div class="vm-grid">
+        <div class="vm-card">
+          <div class="label">Misión</div>
+          <h3>Impulsamos la participación democrática</h3>
+          <p>Impulsamos la participación de personas que comparten la defensa de los valores democráticos en espacios de incidencia. Que defienden con claridad y convicción los principios que sostienen nuestras libertades y a Israel como parte esencial de ese compromiso. Con herramientas, identidad y acción política, construimos una red de referentes con voz, coraje y vocación de transformar la realidad política y social.</p>
+        </div>
+        <div class="vm-card">
+          <div class="label">Visión</div>
+          <h3>Un mundo más justo e inclusivo</h3>
+          <p>Trabajamos por un mundo más justo, inclusivo y seguro, sin lugar para el antisemitismo y los discursos de odio. En el que la política se ubica al servicio de la dignidad humana y los líderes se animan a transformar realidades desde el coraje y la palabra.</p>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="novedades">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Actualidad</p>
+        <h2>Novedades</h2>
+      </div>
+      <div class="news-grid">
+        
+
+        <article class="news-card">
+          <img src="imgs/guerreros_de_la_palabra.png" loading="lazy">
+          <div class="news-body">
+            <time datetime="2026-03-28">28 Mar 2026</time>
+            <p> Lanzamos "Guerreros de la palabra": la serie de charlas de Gabriel Ben Tasgal</p>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img src="imgs/pato.png" loading="lazy">
+          <div class="news-body">
+            <time datetime="2026-03-03">03 Mar 2026</time>
+            <p>Charla con Patricia Bullrich, sobre la politica argentina</p>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img src="imgs/rab.jpg" loading="lazy">
+          <div class="news-body">
+            <time datetime="2026-02-17">17 Feb 2026</time>
+            <p>Charla con el Sergio Bergman, sobre la politica argentina</p>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <img src="imgs/clase1.jpg" alt="Jornada educativa" loading="lazy">
+          <div class="news-body">
+            <time datetime="2026-04-15">15 Abr 2026</time>
+            <p>Realizamos una jornada educativa con más de 50 estudiantes para aprender sobre temas de actualidad de Israel.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-proyectos" id="proyectos">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Programas estrategicos</p>
+        <h2>Proyectos</h2>
+      </div>
+
+      <div class="projects-grid">
+        <a class="project-card" href="https://example.com/proyectos/educacion" target="_blank" rel="noopener noreferrer">
+          <img src="imgs/educacion.png" alt="Proyecto de educacion comunitaria" loading="lazy">
+          <div class="project-overlay">
+            <h3>Educacion Comunitaria</h3>
+            <p>Para el fortalecimiento de nuestros conocimientos y habilidades en la comunidad.</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://example.com/proyectos/guerreros" target="_blank" rel="noopener noreferrer">
+          <img src="imgs/guerreros2.png" loading="lazy">
+          <div class="project-overlay">
+            <h3>Guerreros de la Palabra</h3>
+            <p>Talleres de Oratoria y Comunicación</p>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://example.com/proyectos/informamos" target="_blank" rel="noopener noreferrer">
+          <img src="imgs/informamos.png" loading="lazy">
+          <div class="project-overlay">
+            <h3>Informamos en las Redes</h3>
+            <p>Desmintiendo mitos sobre Israel para informar sobre quienes somos</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="donaciones" id="donaciones">
+    <div class="container">
+      <button class="donate-trigger" onclick="toggleDonate(this)">
+        <div class="donate-trigger-left">
+          <div class="donate-icon">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div>
+            <h2>Hacer una Donacion</h2>
+            <p>Tu aporte hace posible nuestro trabajo. Cada contribucion importa.</p>
+          </div>
+        </div>
+        <div class="donate-chevron">
+          <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </button>
+
+      <div class="donate-body" id="donateBody">
+        <div class="donate-inner">
+          <div class="bank-card">
+            <h4>Datos Bancarios - Pesos (ARS)</h4>
+            <div class="bank-row"><span class="lbl">Titular</span><span class="val">Fundación Milá</span></div>
+            <div class="bank-row"><span class="lbl">CUIT</span><span class="val">30-12345678-9</span></div>
+            <div class="bank-row"><span class="lbl">Banco</span><span class="val">Banco Ciudad</span></div>
+            <div class="bank-row"><span class="lbl">Tipo de cuenta</span><span class="val">Cuenta Corriente</span></div>
+            <div class="bank-row"><span class="lbl">Numero de cuenta</span><span class="val">001-12345/6</span></div>
+            <div class="bank-row"><span class="lbl">CBU</span><span class="val">0290001700000012345678</span></div>
+            <div class="bank-row"><span class="lbl">Alias</span><span class="val">MILA.DONACION.ARS</span></div>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div class="bank-card">
+              <h4>Datos Bancarios - Dolares (USD)</h4>
+              <div class="bank-row"><span class="lbl">Titular</span><span class="val">Fundación Milá</span></div>
+              <div class="bank-row"><span class="lbl">Banco</span><span class="val">Banco Ciudad</span></div>
+              <div class="bank-row"><span class="lbl">Cuenta en USD</span><span class="val">001-98765/4</span></div>
+              <div class="bank-row"><span class="lbl">CBU</span><span class="val">0290001700000098765432</span></div>
+              <div class="bank-row"><span class="lbl">Alias</span><span class="val">MILA.DONACION.USD</span></div>
+            </div>
+
+            <div class="donate-note">
+              <strong>Como donar?</strong>
+              Realiza una transferencia bancaria con los datos indicados. Una vez realizado el aporte, podes enviarnos el comprobante a <strong>donaciones@fundacionmila.org.ar</strong> para que podamos agradecerte personalmente y emitir el recibo correspondiente.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners" id="partners">
+    <div class="container">
+      <div class="partners-header">
+        <div class="section-label">Aliados estrategicos</div>
+        <h2 class="section-title">Nos Acompañan</h2>
+        <div class="gold-line" style="margin:20px auto;"></div>
+        <p class="section-sub" style="max-width:480px; margin:0 auto; text-align:center;">Organizaciones e instituciones que comparten nuestra vision y nos acompanan en este camino.</p>
+      </div>
+
+      <div class="logos-grid">
+        <div class="logo-box">AMIA</div>
+        <div class="logo-box">DAIA</div>
+        <div class="logo-box">OJI</div>
+        <div class="logo-box">Federacion</div>
+        <div class="logo-box">Wizo</div>
+        <div class="logo-box">Hebraica</div>
+        <div class="logo-box">Tzofim</div>
+        <div class="logo-box">Maccabi</div>
+        <div class="logo-box">JDC</div>
+        <div class="logo-box">WZO</div>
+        <div class="logo-box">B'nai B'rith</div>
+        <div class="logo-box">Hadassah</div>
+        <div class="logo-box">ICUF</div>
+        <div class="logo-box">ORT</div>
+        <div class="logo-box">OSA</div>
+        <div class="logo-box">Embajada</div>
+        <div class="logo-box">CELS</div>
+        <div class="logo-box">ADC</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto" id="contacto">
+    <div class="container">
+      <div class="section-label">Contacto</div>
+      <h2 class="section-title">Ponete en Contacto</h2>
+      <p class="section-sub">Queres sumarte, colaborar o simplemente saber mas? Estamos para escucharte.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h5>Direccion</h5>
+              <p>Av. Corrientes 1234, Piso 8<br>Ciudad Autonoma de Buenos Aires</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h5>Email</h5>
+              <p>contacto@fundacionmila.org.ar</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3-8.59A2 2 0 0 1 3.69 1.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.12a16 16 0 0 0 6 6l1-1.01a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.5 16.5l.42.42z"/></svg>
+            </div>
+            <div>
+              <h5>Telefono</h5>
+              <p>+54 11 4321-5678</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="text" placeholder="Tu nombre">
+            </div>
+            <div class="form-group">
+              <label>Apellido</label>
+              <input type="text" placeholder="Tu apellido">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="tu@email.com">
+          </div>
+          <div class="form-group">
+            <label>Asunto</label>
+            <input type="text" placeholder="En que podemos ayudarte?">
+          </div>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea rows="5" placeholder="Escribi tu mensaje aqui..."></textarea>
+          </div>
+          <button class="form-submit">
+            Enviar Mensaje
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="name">MILA</div>
+          <div class="slogan">Compromiso con la Acción</div>
+          <p>Fundación sin fines de lucro dedicada a impulsar liderazgos comprometidos con los valores democráticos y los derechos humanos.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Institución</h5>
+          <a href="#">Quiénes somos</a>
+          <a href="#">Misión y Visión</a>
+          <a href="#">Equipo</a>
+          <a href="#">Prensa</a>
+          <a href="#">Transparencia</a>
+        </div>
+        <div class="footer-col">
+          <h5>Programas</h5>
+          <a href="#">Voces con Acción</a>
+          <a href="#">Red de Referentes</a>
+          <a href="#">Memoria Activa</a>
+          <a href="#">Diálogo</a>
+          <a href="#">Observatorio</a>
+        </div>
+        <div class="footer-col">
+          <h5>Participa</h5>
+          <a href="#">Hace una donación</a>
+          <a href="#">Úmate como voluntario</a>
+          <a href="#">Alianzas institucionales</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Fundación Milá. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
