@@ -1,6 +1,7 @@
 function openModal() {
   document.getElementById('videoModal').classList.add('active');
-  document.getElementById('videoFrame').src = 'https://www.youtube.com/embed/?autoplay=1';
+  const video = document.getElementById('videoFrame');
+  video.play();
   document.body.style.overflow = 'hidden';
 }
 
@@ -10,7 +11,9 @@ function closeModal(e) {
   }
 
   document.getElementById('videoModal').classList.remove('active');
-  document.getElementById('videoFrame').src = '';
+  const video = document.getElementById('videoFrame');
+  video.pause();
+  video.currentTime = 0;
   document.body.style.overflow = '';
 }
 
@@ -33,6 +36,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
+/*
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener('click', (e) => {
     const target = document.querySelector(a.getAttribute('href'));
@@ -44,4 +48,4 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
     const offset = 72;
     window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
   });
-});
+});*/

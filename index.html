@@ -45,7 +45,11 @@
   <div class="modal-overlay" id="videoModal" onclick="closeModal(event)">
     <div class="modal-box">
       <button class="modal-close" onclick="closeModal(null)">X</button>
-      <iframe id="videoFrame" src="" allowfullscreen allow="autoplay"></iframe>
+      <video id="videoFrame" controls autoplay style="width: 100%; height: 100%; object-fit: contain;">
+        <source src="imgs/mila_institucional.mp4" type="video/mp4">
+        <source src="imgs/mila_institucional.mov" type="video/quicktime">
+        Tu navegador no soporta el elemento de video.
+      </video>
     </div>
   </div>
 
@@ -120,10 +124,10 @@
 
       <div class="projects-grid">
         <a class="project-card" href="https://example.com/proyectos/educacion" target="_blank" rel="noopener noreferrer">
-          <img src="imgs/educacion.png" alt="Proyecto de educacion comunitaria" loading="lazy">
+          <img src="imgs/formacion_dirigentes.jpeg" loading="lazy">
           <div class="project-overlay">
-            <h3>Educacion Comunitaria</h3>
-            <p>Para el fortalecimiento de nuestros conocimientos y habilidades en la comunidad.</p>
+            <h3>Formación de dirigentes</h3>
+            <p>Programa destinado a jóvenes comprometidos con los valores democráticos y con potencial de liderazgo político.</p>
           </div>
         </a>
 
@@ -131,15 +135,15 @@
           <img src="imgs/guerreros2.png" loading="lazy">
           <div class="project-overlay">
             <h3>Guerreros de la Palabra</h3>
-            <p>Talleres de Oratoria y Comunicación</p>
+            <p>Guerreros de la Palabra es un programa de formación intelectual y práctica para aprender a entender mejor, argumentar con claridad y persuadir con ética.</p>
           </div>
         </a>
 
         <a class="project-card" href="https://example.com/proyectos/informamos" target="_blank" rel="noopener noreferrer">
-          <img src="imgs/informamos.png" loading="lazy">
+          <img src="imgs/batalla_digital.jpg" loading="lazy">
           <div class="project-overlay">
-            <h3>Informamos en las Redes</h3>
-            <p>Desmintiendo mitos sobre Israel para informar sobre quienes somos</p>
+            <h3>Batalla Digital</h3>
+            <p>Desmentimos mitos sobre Israel y luchamos contra el antisemitismo</p>
           </div>
         </a>
       </div>
@@ -205,25 +209,10 @@
         <p class="section-sub" style="max-width:480px; margin:0 auto; text-align:center;">Organizaciones e instituciones que comparten nuestra vision y nos acompanan en este camino.</p>
       </div>
 
-      <div class="logos-grid">
-        <div class="logo-box">AMIA</div>
-        <div class="logo-box">DAIA</div>
-        <div class="logo-box">OJI</div>
-        <div class="logo-box">Federacion</div>
-        <div class="logo-box">Wizo</div>
-        <div class="logo-box">Hebraica</div>
-        <div class="logo-box">Tzofim</div>
-        <div class="logo-box">Maccabi</div>
-        <div class="logo-box">JDC</div>
-        <div class="logo-box">WZO</div>
-        <div class="logo-box">B'nai B'rith</div>
-        <div class="logo-box">Hadassah</div>
-        <div class="logo-box">ICUF</div>
-        <div class="logo-box">ORT</div>
-        <div class="logo-box">OSA</div>
-        <div class="logo-box">Embajada</div>
-        <div class="logo-box">CELS</div>
-        <div class="logo-box">ADC</div>
+      <div class="logos-grid logos-single">
+        <div class="logo-box">
+          <img src="imgs/logo_judaica.png" alt="Fundacion Judaica" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
       </div>
     </div>
   </section>

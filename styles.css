@@ -1,16 +1,31 @@
 :root {
+  --navy: #1a2332;
+  --blue: #2a3f5f;
+  --mid-blue: #3d5a8c;
+  --light-blue: #5a7ba8;
+  --sky: #f0f3f8;
+  --gold: #3d5a8c;
+  --white: #ffffff;
+  --off-white: #eef1f6;
+  --text: #1e2630;
+  --text-light:  #7a746a; /*  #6b7a8a; */ 
+  --border: #d4dce6;
+}
+/*
+:root {
   --navy: #2a2620;
   --blue: #3d3830;
   --mid-blue: #5a5448;
   --light-blue: #8a8278;
   --sky: #f5f2ec;
-  --gold: #c4973a;
+  --gold: 
   --white: #ffffff;
   --off-white: #f5f3ef;
   --text: #201e18;
   --text-light: #7a746a;
   --border: #e0dbd2;
 }
+*/
 
 *,
 *::before,
@@ -652,13 +667,16 @@ section {
 
 .project-overlay {
   position: absolute;
-  inset: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 1.25rem;
-  background: linear-gradient(180deg, rgba(9, 30, 53, 0.08) 25%, rgba(9, 30, 53, 0.86) 100%);
-  color: #f8fbff;
+  padding: 2rem 1.25rem 1.25rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(9, 30, 53, 0.5) 40%, rgba(9, 30, 53, 0.9) 100%);
+  color: #f8fbff;  
 }
 
 .project-overlay h3 {
@@ -669,11 +687,26 @@ section {
 .project-overlay p {
   margin: 0;
   color: #d9e4ef;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
 .project-card:hover .project-overlay,
 .project-card:focus-visible .project-overlay {
-  background: linear-gradient(180deg, rgba(9, 30, 53, 0.16) 20%, rgba(9, 30, 53, 0.92) 100%);
+  background: linear-gradient(180deg, transparent 0%, rgba(9, 30, 30, 0.8) 30%, rgba(0, 0, 0, 1) 100%);
+}
+
+.project-card:hover .project-overlay p,
+.project-card:focus-visible .project-overlay p {
+  max-height: 100px;
+  opacity: 1;
+}
+
+.project-card img{
+  height: 350px;
+  object-fit: contain;
 }
 
 .proj-content {
@@ -971,6 +1004,12 @@ section {
   gap: 2px;
 }
 
+.logos-grid.logos-single {
+  grid-template-columns: 1fr;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 .logo-box {
   height: 90px;
   display: flex;
@@ -988,10 +1027,21 @@ section {
   letter-spacing: 0.05em;
 }
 
+.logos-single .logo-box {
+  height: 200px;
+  background: var(--sky);
+  border-radius: 8px;
+}
+
 .logo-box:hover {
   filter: grayscale(0);
   opacity: 1;
   background: #eeebe4;
+}
+
+.logos-single .logo-box:hover {
+  background: var(--off-white);
+  box-shadow: 0 8px 24px rgba(26, 35, 50, 0.15);
 }
 
 .contacto {
