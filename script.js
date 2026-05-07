@@ -1,3 +1,9 @@
+const emailJsConfig = {
+  publicKey: '',
+  serviceId: '',
+  templateId: ''
+};
+
 function openModal() {
   document.getElementById('videoModal').classList.add('active');
   const video = document.getElementById('videoFrame');
@@ -35,6 +41,46 @@ window.addEventListener('scroll', () => {
     header.style.boxShadow = 'none';
   }
 });
+
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm && window.emailjs) {
+  window.emailjs.init({
+    publicKey: emailJsConfig.publicKey
+  });
+
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (emailJsConfig.publicKey === 'REEMPLAZAR_CON_TU_PUBLIC_KEY') {
+      alert('Falta configurar la public key de EmailJS en script.js');
+      return;
+    }
+
+    const submitButton = contactForm.querySelector('.form-submit');
+    const originalText = submitButton.childNodes[0].textContent;
+
+    submitButton.disabled = true;
+    submitButton.childNodes[0].textContent = 'Enviando... ';
+
+    try {
+      await window.emailjs.sendForm(
+        emailJsConfig.serviceId,
+        emailJsConfig.templateId,
+        contactForm
+      );
+
+      alert('Mensaje enviado correctamente.');
+      contactForm.reset();
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+      alert('No se pudo enviar el mensaje. Revisa la configuracion de EmailJS.');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.childNodes[0].textContent = originalText;
+    }
+  });
+}
 
 /*
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
